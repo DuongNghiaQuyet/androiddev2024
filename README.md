@@ -10,7 +10,7 @@ Students are expected to:
 Student Info
 =======================
 
-* Name: *YourNameHere*
-* ID: *YourIdHere*
-* Group ID: *Your Group ID here*
-* Project Name: *Your Project Name here*
+* Name: Dương Nghĩa Quyết
+* ID: BI11-234
+* Group ID: 11
+* Project Name: Github Browser
