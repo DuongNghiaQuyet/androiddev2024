@@ -1,6 +1,8 @@
 package vn.edu.usth.weather;
+
 import android.os.Bundle;
 import android.util.Log;
+
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -13,6 +15,13 @@ public class WeatherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_weather);
+        // fragment(s)
+        // check if a fragment is already loaded
+        if (savedInstanceState == null) {
+            // add fragment
+            ForecastFragment forecast = new ForecastFragment();
+            getSupportFragmentManager().beginTransaction().add(R.id.main, forecast).commit();
+        }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
