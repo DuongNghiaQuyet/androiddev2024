@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
 public class WeatherActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +20,8 @@ public class WeatherActivity extends AppCompatActivity {
         // check if a fragment is already loaded
         if (savedInstanceState == null) {
             // add fragment
-            ForecastFragment forecast = new ForecastFragment();
-            getSupportFragmentManager().beginTransaction().add(R.id.main, forecast).commit();
+            //ForecastFragment forecast = new ForecastFragment();
+            //getSupportFragmentManager().beginTransaction().add(R.id.main, forecast).commit();
         }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
