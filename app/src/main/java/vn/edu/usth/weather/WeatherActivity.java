@@ -4,30 +4,36 @@ import android.os.Bundle;
 import android.util.Log;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 public class WeatherActivity extends AppCompatActivity {
     private static final String tag = "WeatherActivity";
 
     ViewPager2 viewPager2;
     ViewPagerAdapter viewPagerAdapter;
+    TabLayout tabLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.i("CreateApplication", "onCreate() is being executed!");
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_weather);
-        // fragment(s)
-        // check if a fragment is already loaded
-        if (savedInstanceState == null) {
-            // add fragment
-            //ForecastFragment forecast = new ForecastFragment();
-            //getSupportFragmentManager().beginTransaction().add(R.id.main, forecast).commit();
-        }
+
         viewPager2 = findViewById(R.id.pager);
         viewPagerAdapter = new ViewPagerAdapter(this);
         viewPager2.setAdapter(viewPagerAdapter);
+        tabLayout = findViewById(R.id.tab);
+        TabLayoutMediator mediator = new TabLayoutMediator(tabLayout, viewPager2, new TabLayoutMediator.TabConfigurationStrategy() {
+            @Override
+            public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
+                tab.setText(viewPagerAdapter.getPageTitle(position));
+            }
+        });
+        mediator.attach();
     }
     @Override
     protected void onStart() {
