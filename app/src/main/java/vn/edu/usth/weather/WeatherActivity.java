@@ -5,11 +5,13 @@ import android.util.Log;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.viewpager2.widget.ViewPager2;
 
 public class WeatherActivity extends AppCompatActivity {
+    private static final String tag = "WeatherActivity";
+
+    ViewPager2 viewPager2;
+    ViewPagerAdapter viewPagerAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.i("CreateApplication", "onCreate() is being executed!");
@@ -23,11 +25,9 @@ public class WeatherActivity extends AppCompatActivity {
             //ForecastFragment forecast = new ForecastFragment();
             //getSupportFragmentManager().beginTransaction().add(R.id.main, forecast).commit();
         }
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        viewPager2 = findViewById(R.id.pager);
+        viewPagerAdapter = new ViewPagerAdapter(this);
+        viewPager2.setAdapter(viewPagerAdapter);
     }
     @Override
     protected void onStart() {
