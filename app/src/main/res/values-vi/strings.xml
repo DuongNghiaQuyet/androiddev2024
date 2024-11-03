@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ExtraTranslation">
+    <string name="app_name">Thời tiết USTH</string>
+    <string name="action_settings">Cài đặt</string>
+    <string name="first_fragment_label">Phân đoạn đầu tiên</string>
+    <string name="second_fragment_label">Phân đoạn thứ hai</string>
+    <string name="next">Tiếp theo</string>
+    <string name="previous">Trước</string>
+    <string name="hello">Xin chào</string>
+    <string name="thursday">Thứ Năm</string>
+    <string name="hello_blank_fragment">Xin chào phân đoạn trống</string>
+    <string name="tab_layout_description">Bố cục tab</string>
+    <string name="weather_info">20C\nCó mưa</string>
+    <string name="place_name">Hà Nội</string>
+    <string name="Mon">Thứ Hai</string>
+    <string name="Partly_Cloudy">Trời nhiều mây</string>
+    <string name="Tue">Thứ Ba</string>
+    <string name="Showers">Mưa rào</string>
+    <string name="Wed">Thứ Tư</string>
+    <string name="Rain">Mưa</string>
+    <string name="Thu">Thứ Năm</string>
+    <string name="Scattered_Showers">Mưa rào rải rác</string>
+    <string name="Fri">Thứ Sáu</string>
+    <string name="Mostly_Cloudy">Mây nhiều</string>
+    <string name="Sat">Thứ Bảy</string>
+    <string name="Thunderstorms">Giông bão</string>
+    <string name="Sun">Chủ Nhật</string>
+</resources>
+

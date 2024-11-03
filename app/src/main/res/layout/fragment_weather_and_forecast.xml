@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="8dp"
+    android:layout_margin="@dimen/margin_small"
     tools:context=".WeatherAndForecastFragment">
 
     <fragment
@@ -14,7 +14,7 @@
         tools:layout="@layout/fragment_weather"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp" />
+        android:layout_margin="@dimen/margin_small" />
 
     <fragment
         android:id="@+id/fc"
@@ -22,5 +22,6 @@
         tools:layout="@layout/fragment_forecast"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp" />
+        android:layout_margin="@dimen/margin_small" />
 </LinearLayout>
+

@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="8dp"
+    android:layout_margin="@dimen/margin_small"
     tools:context=".ForecastFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_margin="@dimen/margin_small"
         android:background="@color/white"
         android:orientation="vertical"
-        android:padding="16dp"><!-- Blue Background -->
+        android:padding="@dimen/padding_medium">
 
         <!-- First Day: Monday -->
         <LinearLayout
@@ -20,15 +21,14 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:padding="8dp">
-
+            android:padding="@dimen/padding_small">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Mon"
-                android:textSize="16sp" />
+                android:text="@string/Mon"
+                android:textSize="@dimen/text_size_small" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -41,8 +41,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:text="Partly Cloudy\n24C - 31C"
-                android:textSize="14sp" />
+                android:text="@string/Partly_Cloudy"
+                android:textSize="@dimen/text_size_small" />
         </LinearLayout>
 
         <!-- Second Day: Tuesday -->
@@ -51,14 +51,14 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:padding="8dp">
+            android:padding="@dimen/padding_small">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Tue"
-                android:textSize="16sp" />
+                android:text="@string/Tue"
+                android:textSize="@dimen/text_size_small" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -71,8 +71,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:text="Showers\n22C - 30C"
-                android:textSize="14sp" />
+                android:text="@string/Showers"
+                android:textSize="@dimen/text_size_small" />
         </LinearLayout>
 
         <!-- Third Day: Wednesday -->
@@ -81,14 +81,14 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:padding="8dp">
+            android:padding="@dimen/padding_small">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Wed"
-                android:textSize="16sp" />
+                android:text="@string/Wed"
+                android:textSize="@dimen/text_size_small" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -101,8 +101,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:text="Rain\n22C - 28C"
-                android:textSize="14sp" />
+                android:text="@string/Rain"
+                android:textSize="@dimen/text_size_small" />
         </LinearLayout>
 
         <!-- Fourth Day: Thursday -->
@@ -111,14 +111,14 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:padding="8dp">
+            android:padding="@dimen/padding_small">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Thu"
-                android:textSize="16sp" />
+                android:text="@string/Thu"
+                android:textSize="@dimen/text_size_small" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -131,8 +131,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:text="Scattered Showers\n22C - 30C"
-                android:textSize="14sp" />
+                android:text="@string/Scattered_Showers"
+                android:textSize="@dimen/text_size_small" />
         </LinearLayout>
 
         <!-- Fifth Day: Friday -->
@@ -141,14 +141,14 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:padding="8dp">
+            android:padding="@dimen/padding_small">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Fri"
-                android:textSize="16sp" />
+                android:text="@string/Fri"
+                android:textSize="@dimen/text_size_small" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -161,8 +161,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:text="Mostly Cloudy\n22C - 27C"
-                android:textSize="14sp" />
+                android:text="@string/Mostly_Cloudy"
+                android:textSize="@dimen/text_size_small" />
         </LinearLayout>
 
         <!-- Sixth Day: Saturday -->
@@ -171,14 +171,14 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:padding="8dp">
+            android:padding="@dimen/padding_small">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Sat"
-                android:textSize="16sp" />
+                android:text="@string/Sat"
+                android:textSize="@dimen/text_size_small" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -191,8 +191,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:text="Thunderstorms\n25C - 28C"
-                android:textSize="14sp" />
+                android:text="@string/Thunderstorms"
+                android:textSize="@dimen/text_size_small" />
         </LinearLayout>
 
         <!-- Seventh Day: Sunday -->
@@ -201,14 +201,14 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:padding="8dp">
+            android:padding="@dimen/padding_small">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Sun"
-                android:textSize="16sp" />
+                android:text="@string/Sun"
+                android:textSize="@dimen/text_size_small" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -221,8 +221,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:text="Showers\n22C - 27C"
-                android:textSize="14sp" />
+                android:text="@string/Showers"
+                android:textSize="@dimen/text_size_small" />
         </LinearLayout>
 
     </LinearLayout>

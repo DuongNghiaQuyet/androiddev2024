@@ -5,9 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="200dp"
-    android:background="#1aff00"
-    android:padding="8dp"
-    android:layout_margin="8dp"
+    android:background="@color/green"
+    android:padding="@dimen/padding_small"
+    android:layout_margin="@dimen/margin_small"
     tools:context=".WeatherFragment">
 
     <TextView
@@ -15,13 +15,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:text="12C\nCloudy"
-        android:textSize="24sp" />
+        android:text="@string/weather_info"
+        android:textSize="@dimen/text_size_large" />
 
     <ImageView
         android:id="@+id/weatherSymbol"
-        android:layout_width="165dp"
-        android:layout_height="154dp"
+        android:layout_width="157dp"
+        android:layout_height="157dp"
         android:layout_centerInParent="true"
         android:src="@drawable/mostly_cloudy" />
 
@@ -30,6 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:text="Paris"
-        android:textSize="24sp"/>
+        android:layout_marginRight="@dimen/margin_small"
+        android:text="@string/place_name"
+        android:textSize="@dimen/text_size_large" />
 </RelativeLayout>
