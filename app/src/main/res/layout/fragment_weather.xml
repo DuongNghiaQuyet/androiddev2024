@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="200dp"
-    android:background="@color/green"
+    android:background="@drawable/frame"
     android:padding="@dimen/padding_small"
     android:layout_margin="@dimen/margin_small"
     tools:context=".WeatherFragment">
@@ -14,7 +14,8 @@
         android:id="@+id/weatherDef"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="10dp"
         android:text="@string/weather_info"
         android:textSize="@dimen/text_size_large" />
 
@@ -30,7 +31,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="@dimen/margin_small"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="45dp"
         android:text="@string/place_name"
         android:textSize="@dimen/text_size_large" />
 </RelativeLayout>
