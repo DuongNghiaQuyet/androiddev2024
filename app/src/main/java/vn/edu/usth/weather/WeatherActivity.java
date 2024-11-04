@@ -36,6 +36,7 @@ public class WeatherActivity extends AppCompatActivity {
             }
         });
         mediator.attach();
+        
         mediaPlayer = null;
         mediaPlayer = MediaPlayer.create(this, R.raw.weather);
         mediaPlayer.start();
