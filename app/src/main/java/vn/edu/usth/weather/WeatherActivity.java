@@ -1,8 +1,9 @@
 package vn.edu.usth.weather;
 
-import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,6 +25,7 @@ public class WeatherActivity extends AppCompatActivity {
     TabLayout tabLayout;
     MediaPlayer mediaPlayer;
     Toolbar toolbar;
+    Handler handler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +49,8 @@ public class WeatherActivity extends AppCompatActivity {
 
         mediaPlayer = MediaPlayer.create(this, R.raw.weather);
         mediaPlayer.start();
+
+        handler = new Handler(Looper.getMainLooper()); // Initialize the handler
     }
 
     @Override
@@ -58,14 +62,28 @@ public class WeatherActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.action_refresh) {
-            Toast.makeText(this, "Refresh clicked", Toast.LENGTH_SHORT).show();
-            return true;
-        } else if (item.getItemId() == R.id.action_settings) {
-            startActivity(new Intent(this, PrefActivity.class));
+            simulateNetworkRequest();
             return true;
         } else {
             return super.onOptionsItemSelected(item);
         }
+    }
+
+    private void simulateNetworkRequest() {
+        Toast.makeText(this, "Refreshing...", Toast.LENGTH_SHORT).show();
+
+        // Simulate network request with a thread and handler
+        new Thread(() -> {
+            try {
+                // Simulate network delay
+                Thread.sleep(2000);
+
+                // Update UI on the main thread using the handler
+                handler.post(() -> Toast.makeText(WeatherActivity.this, "Refreshed!", Toast.LENGTH_SHORT).show());
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }).start();
     }
 
     @Override
